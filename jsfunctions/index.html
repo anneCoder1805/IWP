@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Just Some JS Functions</title>
+	<script>
+        function change() {
+		  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+		  document.body.style.backgroundColor = "#"+randomColor;
+		}
+
+		function hi()
+		{
+			alert("Hi! Nice to meet you.")
+		}
+
+		function bye()
+		{
+			alert("Bye, have a nice day!")
+		}
+        
+	</script>
+	<style type="text/css">
+		html,body
+		{
+			height: 100%;
+		}
+		html
+		{
+			display: table;
+			margin: auto;
+		}
+		body
+		{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.b1 {
+			background-color:rgba(250,200,250,0.8);
+			padding: 20px;
+			border:2px solid black;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			border-radius: 12px;
+         }
+	</style>
+</head>
+<body>
+<p>
+<form>
+    <input class ="b1" type = "button" onclick = "change()" value = "Get A Random Colour">
+</form>
+<form>
+    <input class ="b1" type = "button" onclick = "hi()" value = "Say Hi">
+</form>
+<form>
+    <input class ="b1" type = "button" onclick = "bye()" value = "Say Bye">
+</form>
+</p>
+</body>
+</html>

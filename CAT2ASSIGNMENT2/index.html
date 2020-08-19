@@ -7,7 +7,7 @@
      function vForm() {
       var namef = document.getElementById("fName").value;
       if(!/^[a-zA-Z]+$/.test(namef)){
-        alert("Name should contain only letters.")
+        alert("Name should contain only letters")
       }
       var namel = document.getElementById("lName").value;
       if(!/^[a-zA-Z]+$/.test(namel)){
@@ -25,13 +25,15 @@
 <body>
 	<div>
 		<form action>
+      <h1>Student Registration Form</h1>
+      <h5>All Fields are Mandatory</h5>
 		<table>
 			<tr>
 				<td>
   		            <label for="fName">First name:</label>
   		        </td>    
   		        <td>    
-  		        	<input type="text" id="fName" name="fname">
+  		        	<input type="text" id="fName" name="fname" required>
   		        </td>
   		    </tr> 
 
@@ -40,16 +42,51 @@
   		        	<label for="lName">Last name:</label>
   		        </td>
   		        <td>
-  		        	<input type="text" id="lName" name="lname">
+  		        	<input type="text" id="lName" name="lname" required>
   		        </td>
   		    </tr> 
 
   		    <tr>
-  		    	<td></td>
+  		    	<td><label for="gender">Gender:</label></td>
   		    	<td>
-  		        	<input type="submit" value="Submit" onclick="vForm()">
+  		        	<input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
   		        </td>
   		    </tr>	
+          <tr>
+              <td>
+                <label for="dob">Date of Birth:</label>
+              </td>
+              <td>
+                <input type="date" id="dob" name="dob" required>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <label for="ssc">School Name (SSC Certificate):</label>
+              </td>
+              <td>
+                <input type="text" id="ssc" name="ssc" required>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <label for="hsc">School Name (HSC Certificate/Diploma):</label>
+              </td>
+              <td>
+                <input type="text" id="hsc" name="hsc" required>
+              </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Submit" onclick="vForm()">
+              </td>
+          </tr>  
   	   </table>
 	</form>
 	</div> 

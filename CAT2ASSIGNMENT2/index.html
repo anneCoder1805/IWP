@@ -7,11 +7,11 @@
      function vForm() {
       var namef = document.getElementById("fName").value;
       if(!/^[a-zA-Z]+$/.test(namef)){
-        alert("Name should contain only letters (Minimum2).")
+        alert("Name should contain only letters.")
       }
       var namel = document.getElementById("lName").value;
       if(!/^[a-zA-Z]+$/.test(namel)){
-        alert("Name should contain only letters (Minimum 2).")
+        alert("Name should contain only letters.")
       } 
       if(/^[a-zA-Z]+$/.test(namef)&&/^[a-zA-Z]+$/.test(namel)){
         alert("Form Submitted!")
